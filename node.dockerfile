@@ -20,7 +20,7 @@ RUN apt-get -y remove ninja-build npm openssl \
  && apt-get -y autoclean \
  && apt-get -y clean \
  && rm -rf /var/lib/apt/lists/*
-RUN { echo "#!/bin/sh"; which bsrefmt cljfmt luafmt prettier standard | xargs -n 1 basename | xargs -n 1 echo echo; } >/usr/local/bin/formatters \
+RUN { echo "#!/bin/sh"; which bsrefmt cljfmt luafmt prettier rescript standard | xargs -n 1 basename | xargs -n 1 echo echo; } >/usr/local/bin/formatters \
  && chmod +x /usr/local/bin/formatters
 RUN useradd --create-home user
 WORKDIR /home/user
