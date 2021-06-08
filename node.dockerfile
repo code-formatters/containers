@@ -13,6 +13,7 @@ RUN npm install --global \
       prettier-plugin-toml \
       @prettier/plugin-lua \
       @prettier/plugin-php \
+      rescript \
       standard \
  && npm cache clean --force
 RUN apt-get -y remove ninja-build npm openssl \
